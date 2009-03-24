@@ -1,0 +1,13 @@
+alias   src     "source alias"
+
+alias   0.del   "vdel -all"
+alias   1.lib   "vlib work"
+alias   2.vlog  "vlog -sv -work work -f tb_list.f -timescale 1ns/10ps"
+alias   3.sim   "vsim -novopt work.tb"
+
+alias   setup   "1.lib; 2.vlog; 3.sim"
+alias   resetup "0.del; 1.lib; 2.vlog; 3.sim"
+alias   re      "2.vlog; 3.sim"
+
+alias   rs      "restart -f"
+alias   qs      "quit -sim"
